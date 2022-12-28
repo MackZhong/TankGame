@@ -1,0 +1,4 @@
+# depslib dependency file v1.0
+1672196178 source:/home/zxh/Cpp/TankGame/main.c
+	<ncurses.h>
+
