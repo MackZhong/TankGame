@@ -9,4 +9,4 @@ Console tank game uses ncurses on Linux, for C learning.
     "env": { "TERM": "xterm" }
   the terminal type is as your wish. If not do so, the external terminal is null, and ncurses initscr() call will fail.
 6. When launch the program from run icon on the statusbar use clangd, it always run in integrated terminal.
-7. In ncurses, functions call to curses window, like `printw()`, `mvprintw()` and `refresh()`, are effect the default terminal window called `'stdscr'`, thus such w-less functions call to certain curses window, like `wprintw()`, `mvwprintw()` and `wrefresh()`, should referee to the first argument `win` created by `create_newwin()`.
+7. In ncurses, 'w-less' functions call to curses window, like `printw()`, `mvprintw()` and `refresh()`, are effect the default terminal window called `'stdscr'`, thus such windows functions call to certain curses window, like `wprintw()`, `mvwprintw()` and `wrefresh()`, should referee to the first argument `win` created by `create_newwin()`.

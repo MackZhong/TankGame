@@ -12,6 +12,10 @@ project(CursesAttr VERSION 0.1.0)
 add_executable(CursesAttr curses_attr.c)
 target_link_libraries(CursesAttr ncurses)
 
+project(CursesChgat VERSION 0.1.0)
+add_executable(CursesChgat curses_chgat.c)
+target_link_libraries(CursesChgat ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

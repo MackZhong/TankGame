@@ -21,6 +21,18 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "CursesChgat",
+            "program": "${workspaceFolder}/build/CursesChgat",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesChgat",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "TankGame Debug",
             "program": "${workspaceFolder}/build/${workspaceFolderBasename}",
             "args": [],
