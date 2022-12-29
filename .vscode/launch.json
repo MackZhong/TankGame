@@ -17,7 +17,8 @@
             ],
             "env": {
                 "TERM": "xterm"
-            }
+            },
+            "preLaunchTask": "CMake: build TankGame",
             // "internalConsoleOptions": "openOnFirstSessionStart"
         }
     ]

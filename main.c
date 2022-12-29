@@ -1,9 +1,9 @@
 #include <ncurses.h>
 #include <stdlib.h>
+#include <string.h>
 
 // ncurses terminal game
 int main(void) {
-
   initscr(); /* Start curses mode 		  */
 
   raw(); /* Line buffering disabled. 	*/
@@ -20,19 +20,59 @@ int main(void) {
     tenths of a second for input and then returns ERR, if no
     input is available.  */
 
+  int row = 0;
+  int col = 0;                /* to store the number of rows and *
+                               * the number of columns of the screen */
+  getmaxyx(stdscr, row, col); /* get the number of rows and columns */
+  char mesg[] = "Just a string";
+  mvaddstr(row / 2, (col - strlen(mesg)) / 2, mesg);
+  /* Move and put a character string into a given window. */
+  /*
+   mvaddstr(),mvwaddstr() and waddstr(),
+   addnstr(): Puts at most n characters into the screen. If n is negative, then
+    the entire string will be added.
+  */
+
   printw("Type any character to see it in bold\n");
-  int ch = getch();           /* If raw() hadn't been called
+  int chr = getch();          /* If raw() hadn't been called
                                * we have to press enter before it
                                * gets to the program 		*/
-  if (ch == KEY_F(1))         /* Without keypad enabled this will */
+  if (chr == KEY_F(1))        /* Without keypad enabled this will */
     printw("F1 Key pressed"); /*  not get to us either	*/
                               /* Without noecho() some ugly escape
-                               * charachters might have been printed
+                               * characters might have been printed
                                * on screen			*/
   else {
     printw("The pressed key is ");
+    /*
+     mvprintw(), wprintw() and mvwprintw() --> printf()
+     vwprintw(), vw_printw() --> vprintf()
+    */
     attron(A_BOLD);
-    printw("%c", ch);
+    /*
+    A_NORMAL    Normal display(no highlight)
+    A_STANDOUT  Best highlighting mode of the terminal.
+    A_UNDERLINE Underlining
+    A_REVERSE   Reverse video
+    A_BLINK     Blinking
+    A_DIM       Half bright
+    A_BOLD      Extra bright or bold
+    A_PROTECT   Protected mode
+    A_INVIS     Invisible or blank mode
+    A_ALTCHARSET Alternate character set
+    A_CHARTEXT  Bit-mask to extract a character
+    COLOR_PAIR(n) Color-pair number n
+    */
+
+    // printw("%c", ch);
+    mvaddch(10, 10, chr); /* Move the cursor to a given point, and then print a
+                             character. */
+    /*
+     addch(): put a single character into the current cursor location and
+         advance the position of the cursor.
+     waddch() and mvwaddch()
+    */
+
     attroff(A_BOLD);
   }
 
