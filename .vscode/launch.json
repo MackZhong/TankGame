@@ -33,6 +33,18 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "CursesWin",
+            "program": "${workspaceFolder}/build/CursesWin",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesWin",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "TankGame Debug",
             "program": "${workspaceFolder}/build/${workspaceFolderBasename}",
             "args": [],
