@@ -23,6 +23,7 @@ int main() {
   my_win = create_newwin(height, width, startY, startX);
 
   while ((chr = getch()) != KEY_F(1)) {
+    mvprintw(0, 50, "Y=%02d, X=%02d", startY, startX);
     switch (chr) {
     case KEY_LEFT:
       if (startX <= 1) {
@@ -72,7 +73,12 @@ WINDOW *create_newwin(int height, int width, int yStart, int xStart) {
   box(local_win, 0, 0); /* 0, 0 gives default characters
                          * for the vertical and horizontal
                          * lines			*/
-  wrefresh(local_win);  /* Show that box 		*/
+
+  /*
+   * mvhline(), mvvline() and mvaddch() to draw a box.
+   */
+
+  wrefresh(local_win); /* Show that box 		*/
 
   return local_win;
 }
@@ -93,6 +99,12 @@ void destroy_win(WINDOW *local_win) {
    * 7. tr: character to be used for the top right corner of the window
    * 8. bl: character to be used for the bottom left corner of the window
    * 9. br: character to be used for the bottom right corner of the window
+   */
+  /* wborder(local_win, 'l', 'r', 't', 'b', '1', '2', '3', '4');
+   * 1tt2
+   * l  r
+   * l  r
+   * 3bb4
    */
   wrefresh(local_win);
   delwin(local_win);
