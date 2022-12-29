@@ -11,6 +11,17 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "CMake template build task"
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: build CursesAttr",
+            "command": "build",
+            "targets": [
+                "CursesAttr"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "CMake template build task"
         }
     ]
 }

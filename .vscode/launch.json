@@ -7,7 +7,21 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "Debug",
+            "name": "CursesAttr",
+            "program": "${workspaceFolder}/build/CursesAttr",
+            "args": [
+                "/home/zxh/Cpp/TankGame/main.c"
+            ],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesAttr",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "TankGame Debug",
             "program": "${workspaceFolder}/build/${workspaceFolderBasename}",
             "args": [],
             "cwd": "${workspaceFolder}",
