@@ -44,6 +44,17 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "CMake template build task"
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: build CursesColor",
+            "command": "build",
+            "targets": [
+                "CursesColor"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "CMake template build task"
         }
     ]
 }

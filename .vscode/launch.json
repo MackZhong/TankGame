@@ -45,6 +45,18 @@
         {
             "type": "lldb",
             "request": "launch",
+            "name": "CursesColor",
+            "program": "${workspaceFolder}/build/CursesColor",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesColor",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
             "name": "TankGame Debug",
             "program": "${workspaceFolder}/build/${workspaceFolderBasename}",
             "args": [],

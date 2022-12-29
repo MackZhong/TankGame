@@ -20,6 +20,10 @@ project(CursesWin VERSION 0.1.0)
 add_executable(CursesWin curses_win.c)
 target_link_libraries(CursesWin ncurses)
 
+project(CursesColor VERSION 0.1.0)
+add_executable(CursesColor curses_color.c)
+target_link_libraries(CursesColor ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
