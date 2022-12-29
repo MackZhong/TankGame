@@ -78,7 +78,16 @@ int main(void) {
 
   refresh(); /* Print it on to the real screen */
   getch();   /* Wait for user input */
-  endwin();  /* End curses mode		  */
+  /*
+   scanw(), mvscanw(), wscanw() and mvwscanw() --> scanf()
+   vwscanw() --> vscanf()
+   getstr(), wgetstr(), wgetnstr() and mv version: Get strings from the
+   terminal. In essence, this function performs the same task as would be
+   achieved by a series of calls to getch() until a newline, carriage return, or
+   end-of-file is received.
+  */
+
+  endwin(); /* End curses mode		  */
 
   return 0;
 }
