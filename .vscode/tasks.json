@@ -55,6 +55,17 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "CMake template build task"
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: build CursesInterface",
+            "command": "build",
+            "targets": [
+                "CursesInterface"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "CMake template build task"
         }
     ]
 }

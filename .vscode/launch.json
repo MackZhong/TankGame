@@ -70,6 +70,19 @@
             },
             "preLaunchTask": "CMake: build TankGame",
             // "internalConsoleOptions": "openOnFirstSessionStart"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "CursesInterface",
+            "program": "${workspaceFolder}/build/CursesInterface",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesInterface",
         }
     ]
 }

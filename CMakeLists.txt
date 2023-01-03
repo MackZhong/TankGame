@@ -24,6 +24,10 @@ project(CursesColor VERSION 0.1.0)
 add_executable(CursesColor curses_color.c)
 target_link_libraries(CursesColor ncurses)
 
+project(CursesInterface VERSION 0.1.0)
+add_executable(CursesInterface curses_interface.c)
+target_link_libraries(CursesInterface ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
