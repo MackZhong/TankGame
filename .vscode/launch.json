@@ -83,6 +83,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build CursesInterface",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "CursesMouse",
+            "program": "${workspaceFolder}/build/CursesMouse",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesMouse",
         }
     ]
 }
