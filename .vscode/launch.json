@@ -96,6 +96,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build CursesMouse",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "CursesScreen",
+            "program": "${workspaceFolder}/build/CursesScreen",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesScreen",
         }
     ]
 }

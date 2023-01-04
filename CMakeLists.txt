@@ -32,6 +32,10 @@ project(CursesMouse VERSION 0.1.0)
 add_executable(CursesMouse curses_mouse.c)
 target_link_libraries(CursesMouse ncurses)
 
+project(CursesScreen VERSION 0.1.0)
+add_executable(CursesScreen curses_screen.c)
+target_link_libraries(CursesScreen ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
