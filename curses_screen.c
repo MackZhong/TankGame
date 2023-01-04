@@ -71,13 +71,17 @@ int main() {
     }
   }
 
-  scr_dump("window.dump");
+  scr_dump("screen.dump");
   /*
    * used to dump the screen contents to a file given as an argument.
    * Later it can be restored by scr_restore function.
-   * To store and restore windows, the functions putwin() and getwin() can be used.
-   * The function copywin() can be used to copy a window completely onto another window.
+   * To store and restore windows, the functions putwin() and getwin() can be
+   * used. The function copywin() can be used to copy a window completely onto
+   * another window.
    */
+  FILE *windowDump = fopen("window.dump", "w");
+  putwin(menu_win, windowDump);
+  fclose(windowDump);
 
   endwin();
   return 0;
