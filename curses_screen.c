@@ -27,6 +27,15 @@ int main() {
   noecho();
   cbreak(); // Line buffering disabled. pass on everything
 
+  curs_set(0);
+  /*
+   * This function can be used to make the cursor invisible. The parameter to
+   * this function should be:
+   * 0 : invisible
+   * 1 : normal
+   * 2 : very visible / blink
+   */
+
   /* Try to put the window in the middle of screen */
   startX = (COLS - WIDTH) / 2;
   startY = (LINES - HEIGHT) / 2;
