@@ -88,6 +88,17 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "CMake template build task"
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: build CursesMode",
+            "command": "build",
+            "targets": [
+                "CursesMode"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "CMake template build task"
         }
     ]
 }

@@ -109,6 +109,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build CursesScreen",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "CursesMode",
+            "program": "${workspaceFolder}/build/CursesMode",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesMode",
         }
     ]
 }

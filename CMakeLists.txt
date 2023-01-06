@@ -36,6 +36,10 @@ project(CursesScreen VERSION 0.1.0)
 add_executable(CursesScreen curses_screen.c)
 target_link_libraries(CursesScreen ncurses)
 
+project(CursesMode VERSION 0.1.0)
+add_executable(CursesMode curses_mode.c)
+target_link_libraries(CursesMode ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
