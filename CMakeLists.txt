@@ -40,6 +40,10 @@ project(CursesMode VERSION 0.1.0)
 add_executable(CursesMode curses_mode.c)
 target_link_libraries(CursesMode ncurses)
 
+project(CursesACS VERSION 0.1.0)
+add_executable(CursesACS curses_acs.c)
+target_link_libraries(CursesACS ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

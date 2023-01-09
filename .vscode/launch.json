@@ -122,6 +122,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build CursesMode",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "CursesACS",
+            "program": "${workspaceFolder}/build/CursesACS",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build CursesACS",
         }
     ]
 }
