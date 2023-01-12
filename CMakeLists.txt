@@ -71,6 +71,10 @@ project(MenuWindow VERSION 0.1.0)
 add_executable(MenuWindow menu_window.c)
 target_link_libraries(MenuWindow menu ncurses)
 
+project(MenuScroll VERSION 0.1.0)
+add_executable(MenuScroll menu_scroll.c)
+target_link_libraries(MenuScroll menu ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)

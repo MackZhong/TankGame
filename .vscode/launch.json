@@ -204,15 +204,15 @@
         {
             "type": "lldb",
             "request": "launch",
-            "name": "MenuWindow",
-            "program": "${workspaceFolder}/build/MenuWindow",
+            "name": "MenuScroll",
+            "program": "${workspaceFolder}/build/MenuScroll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "terminal": "external",
             "env": {
                 "TERM": "xterm"
             },
-            "preLaunchTask": "CMake: build MenuWindow",
+            "preLaunchTask": "CMake: build MenuScroll",
         }
     ]
 }
