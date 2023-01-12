@@ -198,6 +198,17 @@
             "group": "build",
             "problemMatcher": [],
             "detail": "CMake template build task"
+        },
+        {
+            "type": "cmake",
+            "label": "CMake: build MenuValued",
+            "command": "build",
+            "targets": [
+                "MenuValued"
+            ],
+            "group": "build",
+            "problemMatcher": [],
+            "detail": "CMake template build task"
         }
     ]
 }

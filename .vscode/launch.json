@@ -226,6 +226,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build MenuColumnar",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "MenuValued",
+            "program": "${workspaceFolder}/build/MenuValued",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build MenuValued",
         }
     ]
 }
