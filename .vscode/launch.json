@@ -213,6 +213,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build MenuScroll",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "MenuColumnar",
+            "program": "${workspaceFolder}/build/MenuColumnar",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build MenuColumnar",
         }
     ]
 }
