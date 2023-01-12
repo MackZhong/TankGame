@@ -12,6 +12,8 @@ char *choices[] = {
     "Choice 5", "Choice 6", "Choice 7", "Exit",
 };
 
+void menu_func(ITEM *menu_item);
+
 int main() {
   ITEM **my_items;
   int c;
@@ -33,8 +35,11 @@ int main() {
   /* Initialize items */
   n_choices = ARRAY_SIZE(choices);
   my_items = (ITEM **)calloc(n_choices + 1, sizeof(ITEM *));
-  for (i = 0; i < n_choices; ++i)
+  for (i = 0; i < n_choices; ++i) {
     my_items[i] = new_item(choices[i], choices[i]);
+    /* Set the user pointer */
+    set_item_userptr(my_items[i], menu_func);
+  }
   my_items[n_choices] = (ITEM *)NULL;
   item_opts_off(my_items[3], O_SELECTABLE);
   item_opts_off(my_items[6], O_SELECTABLE);
@@ -62,10 +67,7 @@ int main() {
       menu_driver(my_menu, REQ_UP_ITEM);
       break;
     case 10: /* Enter */
-      move(20, 0);
-      clrtoeol();
-      mvprintw(20, 0, "Item selected is : %s",
-               item_name(current_item(my_menu)));
+      menu_func(current_item(my_menu));
       pos_menu_cursor(my_menu);
       break;
     }
@@ -77,4 +79,10 @@ int main() {
   free_menu(my_menu);
 
   endwin();
+}
+
+void menu_func(ITEM *menu_item) {
+  move(LINES - 5, 10);
+  printw("Item selected is : %s", item_name(menu_item));
+  clrtoeol();
 }
