@@ -135,6 +135,32 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build CursesACS",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Panel1",
+            "program": "${workspaceFolder}/build/Panel1",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build Panel1",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Panel2",
+            "program": "${workspaceFolder}/build/Panel2",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build Panel2",
         }
     ]
 }

@@ -44,6 +44,17 @@ project(CursesACS VERSION 0.1.0)
 add_executable(CursesACS curses_acs.c)
 target_link_libraries(CursesACS ncurses)
 
+# set(LINK_DIR /usr/local/lib)
+# message("Link directory: ${LINK_DIR}")
+# link_directories(${LINK_DIR})
+project(Panel1 VERSION 0.1.0)
+add_executable(Panel1 panel_1.c)
+target_link_libraries(Panel1 panel ncurses)
+
+project(Panel2 VERSION 0.1.0)
+add_executable(Panel2 panel_2.c)
+target_link_libraries(Panel2 panel ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
