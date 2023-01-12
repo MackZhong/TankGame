@@ -187,6 +187,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build Panel4",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Menu1",
+            "program": "${workspaceFolder}/build/Menu1",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build Menu1",
         }
     ]
 }
