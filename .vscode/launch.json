@@ -200,6 +200,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build Menu1",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "MenuWindow",
+            "program": "${workspaceFolder}/build/MenuWindow",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build MenuWindow",
         }
     ]
 }
