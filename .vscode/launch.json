@@ -161,6 +161,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build Panel2",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Panel3",
+            "program": "${workspaceFolder}/build/Panel3",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build Panel3",
         }
     ]
 }

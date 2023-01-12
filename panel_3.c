@@ -1,4 +1,5 @@
 #include <panel.h>
+#include <string.h>
 
 typedef struct _PANEL_DATA {
   int x, y, w, h;
@@ -32,6 +33,7 @@ int main() {
   cbreak();
   noecho();
   keypad(stdscr, TRUE);
+  curs_set(0);
 
   /* Initialize all the colors */
   init_pair(1, COLOR_RED, COLOR_BLACK);
@@ -63,7 +65,7 @@ int main() {
   newy = top->y;
   neww = top->w;
   newh = top->h;
-  while ((ch = getch()) != KEY_F(1)) {
+  while (((ch = getch()) != KEY_F(1)) && (27 != ch) && ('q' != ch)) {
     switch (ch) {
     case 9: /* Tab */
       top = (PANEL_DATA *)panel_userptr(stack_top);
@@ -143,15 +145,18 @@ int main() {
       }
       break;
     }
+
     attron(COLOR_PAIR(4));
     mvprintw(LINES - 3, 0, "Use 'm' for moving, 'r' for resizing");
-    mvprintw(LINES - 2, 0,
-             "Use tab to browse through the windows (F1 to Exit)");
+    mvprintw(
+        LINES - 2, 0,
+        "Use tab to browse through the windows (F1, 'q' or 'ESC' to Exit)");
     attroff(COLOR_PAIR(4));
     refresh();
     update_panels();
     doupdate();
   }
+
   endwin();
   return 0;
 }

@@ -55,6 +55,10 @@ project(Panel2 VERSION 0.1.0)
 add_executable(Panel2 panel_2.c)
 target_link_libraries(Panel2 panel ncurses)
 
+project(Panel3 VERSION 0.1.0)
+add_executable(Panel3 panel_3.c)
+target_link_libraries(Panel3 panel ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
