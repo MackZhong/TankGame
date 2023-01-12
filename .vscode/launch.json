@@ -239,6 +239,19 @@
                 "TERM": "xterm"
             },
             "preLaunchTask": "CMake: build MenuValued",
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "MenuOptions",
+            "program": "${workspaceFolder}/build/MenuOptions",
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "terminal": "external",
+            "env": {
+                "TERM": "xterm"
+            },
+            "preLaunchTask": "CMake: build MenuOptions",
         }
     ]
 }

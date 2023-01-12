@@ -83,6 +83,10 @@ project(MenuValued VERSION 0.1.0)
 add_executable(MenuValued menu_valued.c)
 target_link_libraries(MenuValued menu ncurses)
 
+project(MenuOptions VERSION 0.1.0)
+add_executable(MenuOptions menu_options.c)
+target_link_libraries(MenuOptions menu ncurses)
+
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
 include(CPack)
